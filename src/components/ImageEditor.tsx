@@ -30,8 +30,6 @@ export const ImageEditor = () => {
   const [color, setColor] = useState<string>("#000000");
   const [opacity, setOpacity] = useState<number>(80);
 
-  console.log(font, fontSize);
-
   const handleFontChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFont(e.target.value);
   };
