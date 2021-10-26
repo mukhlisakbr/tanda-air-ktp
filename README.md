@@ -4,7 +4,10 @@
 
 # Tanda Air KTP
 
-![Deployment](https://img.shields.io/github/deployments/mukhlisakbr/tanda-air-ktp/production?label=vercel&logo=vercel&logoColor=white)
+[![Deployment](https://img.shields.io/github/deployments/mukhlisakbr/tanda-air-ktp/production?label=vercel&logo=vercel&logoColor=white)](https://github.com/mukhlisakbr/tanda-air-ktp/deployments/activity_log?environment=Production)
+[![GitLicense](https://gitlicense.com/badge/mukhlisakbr/tanda-air-ktp)](https://gitlicense.com/license/mukhlisakbr/tanda-air-ktp)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+[![GitHub Issues](https://img.shields.io/github/issues/mukhlisakbr/tanda-air-ktp.svg)](https://github.com/mukhlisakbr/tanda-air-ktp/issues)
 
 ## 📖 Introduction
 
