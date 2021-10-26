@@ -23,9 +23,9 @@ export const Upload = () => {
     >
       <input {...getInputProps()} />
       {isDragActive ? (
-        <Text fontSize="xl">Drop the images here ...</Text>
+        <Text fontSize="xl">Letakan disini ...</Text>
       ) : (
-        <Text fontSize="xl">Drag n drop image here, or click to select</Text>
+        <Text fontSize="xl">Seret gambar kesini, atau klik untuk memilih</Text>
       )}
     </Box>
   );
