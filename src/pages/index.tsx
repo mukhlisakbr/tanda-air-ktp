@@ -16,9 +16,9 @@ const Home: NextPage = () => {
 
       <div>
         <ImageContextProvider>
-          <Flex minH="100vh" align="center" justify="center">
+          <Flex minH="100vh" align="center" justify="center" m="8">
             <Box>
-              <Text fontSize="4xl">Beri tanda air di KTP-mu</Text>
+              <Text fontSize="3xl">Beri tanda air di KTP-mu</Text>
               <Upload />
               <ImageEditor />
             </Box>

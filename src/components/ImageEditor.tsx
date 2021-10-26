@@ -26,17 +26,15 @@ export const ImageEditor = () => {
   const [text, setText] = useState<string>();
   return (
     <Box>
-      <Box boxShadow="2xl" rounded="3xl">
-        <Flex mb={8} justify="center">
-          <Flex position="relative" ref={captureRef}>
-            <Draggable>
-              <Box style={{ position: "absolute" }}>{text}</Box>
-            </Draggable>
-            <Image src={image} alt="KTP" />
-          </Flex>
+      <Box boxShadow="2xl" rounded="lg" overflow="hidden" maxW="500px">
+        <Flex position="relative" ref={captureRef} justify="center">
+          <Draggable>
+            <Box style={{ position: "absolute" }}>{text}</Box>
+          </Draggable>
+          <Image src={image} alt="KTP" />
         </Flex>
       </Box>
-      <Box>
+      <Box mt={8}>
         <form>
           <VStack spacing="4">
             <FormControl isRequired>
@@ -51,13 +49,13 @@ export const ImageEditor = () => {
             </FormControl>
             <FormControl>
               <FormLabel>Tipe Font</FormLabel>
-              <Select placeholder="Select option">
+              <Select placeholder="Pilih dulu">
                 <option value="option1">Option 1</option>
                 <option value="option2">Option 2</option>
                 <option value="option3">Option 3</option>
               </Select>
             </FormControl>
-            <FormControl id="amount">
+            <FormControl isRequired>
               <FormLabel>Ukuran Font</FormLabel>
               <NumberInput max={64} min={8}>
                 <NumberInputField />
@@ -68,11 +66,11 @@ export const ImageEditor = () => {
               </NumberInput>
             </FormControl>
             <Button
+              colorScheme="teal"
               type="submit"
               width="100%"
               isLoading={status === "loading"}
-              colorScheme="blue"
-              // onClick={generateImage}
+              onClick={generateImage}
             >
               Unduh
             </Button>

@@ -13,12 +13,13 @@ export const Upload = () => {
 
   return (
     <Box
-      bg="tomato"
+      cursor="pointer"
+      bg="teal"
       color="white"
-      p={8}
+      rounded="lg"
+      p={4}
       textAlign="center"
-      mb={8}
-      mt={8}
+      my={8}
       {...getRootProps()}
     >
       <input {...getInputProps()} />
