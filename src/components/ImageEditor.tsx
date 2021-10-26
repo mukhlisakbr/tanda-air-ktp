@@ -10,61 +10,58 @@ import {
   FormLabel,
   VStack,
   Select,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
+  Text,
+  Slider,
+  SliderTrack,
+  SliderFilledTrack,
+  SliderThumb,
 } from "@chakra-ui/react";
 import Draggable from "react-draggable";
-import { useState } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import useScreenshot from "../hooks/useScreenshot";
+import { HexColorPicker } from "react-colorful";
 
 export const ImageEditor = () => {
   const { image } = useImageContext();
   const { generateImage, captureRef, status } = useScreenshot();
-  const [text, setText] = useState<string>();
+  const [text, setText] = useState<string>("Ganti aku");
+  const [font, setFont] = useState<string>("Fredoka One");
+  const [fontSize, setFontSize] = useState<string>("20");
+  const [color, setColor] = useState<string>("#000000");
+  const [opacity, setOpacity] = useState<number>(80);
+
+  console.log(font, fontSize);
+
+  const handleFontChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFont(e.target.value);
+  };
+
+  const handleFontSizeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFontSize(e.target.value);
+  };
+
   return (
     <Box>
       <Box boxShadow="2xl" rounded="lg" overflow="hidden" maxW="500px">
         <Flex position="relative" ref={captureRef} justify="center">
           <Draggable>
-            <Box style={{ position: "absolute" }}>{text}</Box>
+            <Box style={{ position: "absolute", top: 0, left: 0 }}>
+              <Text
+                fontSize={fontSize}
+                fontFamily={font}
+                color={color}
+                opacity={`${opacity}%`}
+              >
+                {text}
+              </Text>
+            </Box>
           </Draggable>
-          <Image src={image} alt="KTP" />
+          <Image src={image || "/ktp-example.jpg"} alt="KTP" />
         </Flex>
       </Box>
       <Box mt={8}>
         <form>
           <VStack spacing="4">
-            <FormControl isRequired>
-              <FormLabel>Tulisan</FormLabel>
-              <Input
-                placeholder="Gabole nakal 😁"
-                value={text}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                  setText(e.target.value);
-                }}
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel>Tipe Font</FormLabel>
-              <Select placeholder="Pilih dulu">
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-              </Select>
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Ukuran Font</FormLabel>
-              <NumberInput max={64} min={8}>
-                <NumberInputField />
-                <NumberInputStepper>
-                  <NumberIncrementStepper />
-                  <NumberDecrementStepper />
-                </NumberInputStepper>
-              </NumberInput>
-            </FormControl>
             <Button
               colorScheme="teal"
               type="submit"
@@ -74,6 +71,44 @@ export const ImageEditor = () => {
             >
               Unduh
             </Button>
+            <FormControl isRequired>
+              <FormLabel>Tulisan</FormLabel>
+              <Input
+                value={text}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  setText(e.target.value);
+                }}
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel>Pilih Font</FormLabel>
+              <Select onChange={handleFontChange} value={font}>
+                <option value="Fredoka One">Fredoka One</option>
+                <option value="Noto Serif">Noto Serif</option>
+                <option value="Space Mono">Space Mono</option>
+              </Select>
+            </FormControl>
+            <FormControl>
+              <FormLabel>Ukuran Font</FormLabel>
+              <Input value={fontSize} onChange={handleFontSizeChange} />
+            </FormControl>
+            <FormControl>
+              <FormLabel>Tingkat Opasitas</FormLabel>
+              <Slider
+                colorScheme="teal"
+                defaultValue={opacity}
+                onChange={(e) => setOpacity(e)}
+              >
+                <SliderTrack>
+                  <SliderFilledTrack />
+                </SliderTrack>
+                <SliderThumb />
+              </Slider>
+            </FormControl>
+            <FormControl>
+              <FormLabel>Warna Tulisan</FormLabel>
+              <HexColorPicker color={color} onChange={setColor} />
+            </FormControl>
           </VStack>
         </form>
       </Box>

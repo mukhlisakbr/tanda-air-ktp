@@ -17,6 +17,7 @@
     "html-to-image": "^1.9.0",
     "next": "11.1.2",
     "react": "17.0.2",
+    "react-colorful": "^5.5.0",
     "react-dom": "17.0.2",
     "react-draggable": "^4.4.4",
     "react-dropzone": "^11.4.2"
