@@ -1,13 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import { useContext } from "react";
-import { imageContext } from "../context/imageContext";
+import { useImageContext } from "../context/Image";
+import { Box } from "@chakra-ui/react";
+import Draggable from "react-draggable";
 
 export const ImagePreview = () => {
-  const [image] = useContext(imageContext);
+  const { image } = useImageContext();
 
   return (
-    <div>
-      <img src={image} alt="" />
-    </div>
+    <Box position="relative" mb={8}>
+      <Draggable>
+        <div>AKU WM</div>
+      </Draggable>
+      <Box border="1px">
+        <img src={image} alt="" width="100%" />
+      </Box>
+    </Box>
   );
 };
