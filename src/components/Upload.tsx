@@ -1,9 +1,10 @@
-import { useCallback, useState, useContext } from "react";
+import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import { imageContext } from "../context/imageContext";
+import { useImageContext } from "../context/Image";
+import { Box, Text } from "@chakra-ui/react";
 
 export const Upload = () => {
-  const [, setImage] = useContext(imageContext);
+  const { setImage } = useImageContext();
 
   const onDrop = useCallback((acceptedFiles) => {
     setImage(URL.createObjectURL(acceptedFiles[0]));
@@ -11,13 +12,21 @@ export const Upload = () => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
-    <div {...getRootProps()}>
+    <Box
+      bg="tomato"
+      color="white"
+      p={8}
+      textAlign="center"
+      mb={8}
+      mt={8}
+      {...getRootProps()}
+    >
       <input {...getInputProps()} />
       {isDragActive ? (
-        <p>Drop the files here ...</p>
+        <Text fontSize="xl">Drop the images here ...</Text>
       ) : (
-        <p>Drag n drop some files here, or click to select files</p>
+        <Text fontSize="xl">Drag n drop image here, or click to select</Text>
       )}
-    </div>
+    </Box>
   );
 };
