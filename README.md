@@ -1,8 +1,10 @@
+<a href="https://tanda-air-ktp.vercel.app/">
+    <img src="https://sukasari.bandung.go.id/wp-content/uploads/2018/11/ktp-elektronik.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+</a>
 
-<h1 align="center">
-  <img src="https://sukasari.bandung.go.id/wp-content/uploads/2018/11/ktp-elektronik.png" width="200px"/><br/>
-  Tanda Air KTP
-</h1>
+# Tanda Air KTP
+
+![Deployment](https://img.shields.io/github/deployments/mukhlisakbr/tanda-air-ktp/production?label=vercel&logo=vercel&logoColor=white)
 
 ## 📖 Introduction
 
@@ -12,6 +14,7 @@ Put a watermark on your KTP to avoid misuse by irresponsible people. This applic
 ![Screenshot](./docs/screenshot.png)
 
 ## 👷‍♂️ Contribute
+Contributions are always open to anyone, first discuss what you want to do through the issue. Don't forget to always use English.
 
 ## 🛠 Uses
 
