@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { Upload } from "../components/Upload";
+import { ImageContextProvider } from "../context/imageContext";
+import { ImagePreview } from "../components/ImagePreview";
 
 const Home: NextPage = () => {
   return (
@@ -15,13 +17,10 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          <Upload />
-          {/* <Image
-            src={img}
-            alt="Picture of the author"
-            width={500}
-            height={500}
-          /> */}
+          <ImageContextProvider>
+            <Upload />
+            <ImagePreview />
+          </ImageContextProvider>
         </div>
       </main>
     </div>

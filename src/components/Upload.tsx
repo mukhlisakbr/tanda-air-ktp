@@ -1,10 +1,12 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState, useContext } from "react";
 import { useDropzone } from "react-dropzone";
+import { imageContext } from "../context/imageContext";
 
 export const Upload = () => {
-  const [img, setImg] = useState<string>("");
+  const [, setImage] = useContext(imageContext);
+
   const onDrop = useCallback((acceptedFiles) => {
-    setImg(URL.createObjectURL(acceptedFiles[0]));
+    setImage(URL.createObjectURL(acceptedFiles[0]));
   }, []);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
