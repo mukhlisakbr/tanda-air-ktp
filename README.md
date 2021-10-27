@@ -16,6 +16,11 @@ Put a watermark on your KTP to avoid misuse by irresponsible people. This applic
 ## 🌠 Screenshot
 ![Screenshot](./docs/screenshot.png)
 
+## 🎯 Features
+* Drag and drop image upload
+* Draggable watermark position
+* Customizable font display
+* Save to Png
 ## 👷‍♂️ Contribute
 Contributions are always open to anyone, first discuss what you want to do through the issue. Don't forget to always use English.
 
