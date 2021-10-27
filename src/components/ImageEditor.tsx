@@ -19,7 +19,7 @@ import {
   AlertIcon,
 } from "@chakra-ui/react";
 import Draggable from "react-draggable";
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState } from "react";
 import useScreenshot from "../hooks/useScreenshot";
 import { HexColorPicker } from "react-colorful";
 
@@ -69,6 +69,7 @@ export const ImageEditor = () => {
           <VStack spacing="4">
             <Button
               colorScheme="teal"
+              size="lg"
               type="submit"
               width="100%"
               isLoading={status === "loading"}
