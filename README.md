@@ -1,7 +1,3 @@
-<a href="https://tanda-air-ktp.vercel.app/">
-    <img src="https://sukasari.bandung.go.id/wp-content/uploads/2018/11/ktp-elektronik.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
-</a>
-
 # Tanda Air KTP
 
 [![Deployment](https://img.shields.io/github/deployments/mukhlisakbr/tanda-air-ktp/production?label=vercel&logo=vercel&logoColor=white)](https://github.com/mukhlisakbr/tanda-air-ktp/deployments/activity_log?environment=Production)
@@ -20,7 +16,7 @@ Put a watermark on your KTP to avoid misuse by irresponsible people. This applic
 * Drag and drop image upload
 * Draggable watermark position
 * Customizable font display
-* Save to Png
+* Save to PNG
 ## 👷‍♂️ Contribute
 Contributions are always open to anyone, first discuss what you want to do through the issue. Don't forget to always use English.
 
@@ -35,5 +31,4 @@ Contributions are always open to anyone, first discuss what you want to do throu
 * [html-to-image](https://github.com/bubkoo/html-to-image)
 ## 📚 Resources
 
-* [ktp image example](https://www.tokotalk.com/help/upload-ktp-untuk-verifikasi-identitas/)
-* [ktp icon](https://sukasari.bandung.go.id/cek-pencetakan-ktp/)
+* ktp example: https://www.tokotalk.com/help/upload-ktp-untuk-verifikasi-identitas
