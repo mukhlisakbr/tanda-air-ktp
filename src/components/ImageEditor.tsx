@@ -15,6 +15,8 @@ import {
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react";
 import Draggable from "react-draggable";
 import React, { useState, useCallback, useRef } from "react";
@@ -41,10 +43,15 @@ export const ImageEditor = () => {
   return (
     <Box>
       <Box boxShadow="2xl" rounded="lg" overflow="hidden" maxW="500px">
+        <Alert status="info">
+          <AlertIcon />
+          Geser-geser aja tulisan nya mau dimana aja boleh.
+        </Alert>
         <Flex position="relative" ref={captureRef} justify="center">
           <Draggable>
             <Box style={{ position: "absolute", top: 0, left: 0 }}>
               <Text
+                cursor="grab"
                 fontSize={fontSize}
                 fontFamily={font}
                 color={color}
