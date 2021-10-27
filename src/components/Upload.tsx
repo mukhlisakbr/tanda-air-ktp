@@ -26,7 +26,7 @@ export const Upload = () => {
       {isDragActive ? (
         <Text>Letakan disini ...</Text>
       ) : (
-        <Text>Seret gambar kesini, atau klik untuk mengunggah</Text>
+        <Text>Seret gambar kesini, atau klik untuk memilih</Text>
       )}
     </Box>
   );
