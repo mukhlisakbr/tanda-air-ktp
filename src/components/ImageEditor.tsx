@@ -17,6 +17,8 @@ import {
   SliderThumb,
   Alert,
   AlertIcon,
+  Badge,
+  Stack,
 } from "@chakra-ui/react";
 import Draggable from "react-draggable";
 import React, { useState } from "react";
@@ -28,7 +30,7 @@ export const ImageEditor = () => {
   const { generateImage, captureRef, status } = useScreenshot();
   const [text, setText] = useState<string>("Ganti aku");
   const [font, setFont] = useState<string>("Fredoka One");
-  const [fontSize, setFontSize] = useState<string>("20");
+  const [fontSize, setFontSize] = useState<number>(42);
   const [color, setColor] = useState<string>("#000000");
   const [opacity, setOpacity] = useState<number>(80);
 
@@ -36,8 +38,8 @@ export const ImageEditor = () => {
     setFont(e.target.value);
   };
 
-  const handleFontSizeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFontSize(e.target.value);
+  const handleFontSizeChange = (e: number) => {
+    setFontSize(e);
   };
 
   return (
@@ -95,8 +97,17 @@ export const ImageEditor = () => {
               </Select>
             </FormControl>
             <FormControl>
-              <FormLabel>Ukuran Font</FormLabel>
-              <Input value={fontSize} onChange={handleFontSizeChange} />
+              <FormLabel>Ukuran Text</FormLabel>
+              <Slider
+                colorScheme="teal"
+                defaultValue={fontSize}
+                onChange={handleFontSizeChange}
+              >
+                <SliderTrack>
+                  <SliderFilledTrack />
+                </SliderTrack>
+                <SliderThumb />
+              </Slider>
             </FormControl>
             <FormControl>
               <FormLabel>Tingkat Opasitas</FormLabel>

@@ -27,6 +27,7 @@ Contributions are always open to anyone, first discuss what you want to do throu
 * [react-colorful](https://github.com/omgovich/react-colorful)
 * [react-draggable](https://github.com/react-grid-layout/react-draggable)
 * [react-dropzone](https://github.com/react-dropzone/react-dropzone)
+* [html-to-image](https://github.com/bubkoo/html-to-image)
 ## 📚 Resources
 
 * [ktp image example](https://www.tokotalk.com/help/upload-ktp-untuk-verifikasi-identitas/)
