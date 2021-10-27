@@ -4,7 +4,8 @@ import Head from "next/head";
 import { Upload } from "../components/Upload";
 import { ImageContextProvider } from "../context/Image";
 import { ImageEditor } from "../components/ImageEditor";
-import { Flex, Box, Text } from "@chakra-ui/react";
+import { Flex, Box, Link, Text } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const Home: NextPage = () => {
   return (
@@ -35,6 +36,12 @@ const Home: NextPage = () => {
           <Flex minH="100vh" align="center" justify="center" m="8">
             <Box>
               <Text fontSize="3xl">Beri tanda air di KTP-mu</Text>
+              <Link
+                href="https://github.com/mukhlisakbr/tanda-air-ktp"
+                isExternal
+              >
+                GitHub <ExternalLinkIcon mx="2px" />
+              </Link>
               <Upload />
               <ImageEditor />
             </Box>
