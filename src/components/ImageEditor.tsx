@@ -44,7 +44,7 @@ export const ImageEditor = () => {
 
   return (
     <Box>
-      <Box boxShadow="2xl" rounded="lg" overflow="hidden" maxW="500px">
+      <Box boxShadow="2xl" rounded="lg" overflow="hidden">
         <Alert status="info">
           <AlertIcon />
           Geser-geser aja tulisan nya mau dimana aja boleh.
