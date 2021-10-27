@@ -71,7 +71,6 @@ export const ImageEditor = () => {
           <VStack spacing="4">
             <Button
               colorScheme="teal"
-              size="lg"
               type="submit"
               width="100%"
               isLoading={status === "loading"}

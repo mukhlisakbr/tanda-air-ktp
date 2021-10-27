@@ -24,9 +24,9 @@ export const Upload = () => {
     >
       <input {...getInputProps()} />
       {isDragActive ? (
-        <Text fontSize="lg">Letakan disini ...</Text>
+        <Text>Letakan disini ...</Text>
       ) : (
-        <Text fontSize="lg">Seret gambar kesini, atau klik untuk memilih</Text>
+        <Text>Seret gambar kesini, atau klik untuk memilih</Text>
       )}
     </Box>
   );

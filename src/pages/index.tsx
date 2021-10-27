@@ -35,7 +35,9 @@ const Home: NextPage = () => {
         <ImageContextProvider>
           <Flex minH="100vh" align="center" justify="center" m="8">
             <Box>
-              <Text fontSize="3xl">Beri tanda air di KTP-mu</Text>
+              <Text fontWeight="bold" fontSize={{ base: "2xl", md: "4xl" }}>
+                Beri tanda air di KTP-mu
+              </Text>
               <Link
                 href="https://github.com/mukhlisakbr/tanda-air-ktp"
                 isExternal
