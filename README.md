@@ -5,22 +5,19 @@
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![GitHub Issues](https://img.shields.io/github/issues/mukhlisakbr/tanda-air-ktp.svg)](https://github.com/mukhlisakbr/tanda-air-ktp/issues)
 
-## 📖 Introduction
+## Introduction
 
 Put a watermark on your KTP to avoid misuse by irresponsible people. This application helps you to make watermarks easily and quickly on all your devices. Don't worry, all processes are done in your browser, so your data is not sent anywhere.
 
-## 🌠 Screenshot
+## Screenshot
 ![Screenshot](./docs/screenshot.png)
 
-## 🎯 Features
+## Features
 * Drag and drop image upload
 * Draggable watermark position
 * Customizable font display
 * Save to PNG
-## 👷‍♂️ Contribute
-Contributions are always open to anyone, first discuss what you want to do through the issue. Don't forget to always use English.
-
-## 🛠 Uses
+## Uses
 
 * [typescript](https://github.com/microsoft/TypeScript)
 * [next.js](https://github.com/vercel/next.js)
@@ -29,6 +26,8 @@ Contributions are always open to anyone, first discuss what you want to do throu
 * [react-draggable](https://github.com/react-grid-layout/react-draggable)
 * [react-dropzone](https://github.com/react-dropzone/react-dropzone)
 * [html-to-image](https://github.com/bubkoo/html-to-image)
-## 📚 Resources
+## Contribute
+Contributions are always open to anyone, first discuss what you want to do through the issue. Don't forget to always use English.
+## Resources
 
 * ktp example: https://www.tokotalk.com/help/upload-ktp-untuk-verifikasi-identitas
